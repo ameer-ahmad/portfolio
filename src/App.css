@@ -8,6 +8,7 @@ html {
   font-size: 10px;
 }
 
+/* Style for nav bar */
 .nav-bar {
   display: flex;
   height: 10vh;
@@ -15,6 +16,18 @@ html {
   max-width: 165.988rem;
   width: 90%;
   margin: 8.28rem auto 0;
+}
+
+.nav-links li {
+  font-size: 3.6rem;
+  margin-left: 7.5rem;
+  color: #c1ccf4;
+
+}
+
+a {
+  text-decoration: none;
+  color: #c1ccf4;
 }
 
 .logo {
@@ -25,4 +38,6 @@ html {
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: flex-start;
+  padding-top: 1rem;
 }

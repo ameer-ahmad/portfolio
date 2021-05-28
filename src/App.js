@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import {Route, BrowserRouter as Router} from 'react-router-dom';
-import Work from './pages/work';
-import About from './pages/about';
+import Work from './pages/Work';
+import About from './pages/About';
 import Nav from './components/Nav';
 
 function App() {
