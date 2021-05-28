@@ -14,8 +14,9 @@ html {
   height: 10vh;
   justify-content: space-between;
   max-width: 165.988rem;
-  width: 90%;
+  width: 80%;
   margin: 8.28rem auto 0;
+  background: white;
 }
 
 .nav-links li {
@@ -40,4 +41,49 @@ a {
   display: flex;
   align-items: flex-start;
   padding-top: 1rem;
+}
+
+/* Style for landing page */
+
+.landing {
+  display: flex;
+  height: 68rem;
+  box-shadow: 0px 125px 50px -50px rgba(0, 0, 0, 0.13);
+  border-radius: 0 0 80px 80px;
+}
+
+.landing:before {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  top: -7px;
+  background: inherit;
+  z-index: 2;
+}
+
+.intro {
+  margin-left: 17.357rem;
+  margin-top: 14rem;
+}
+
+.intro h1 {
+  font-size: 6.4rem;
+  color: #454545;
+}
+
+.intro h2 {
+  font-size: 3.6rem;
+  color: #7f94e0;
+}
+
+.intro p {
+  font-size: 2.4rem;
+  color: #8d94b0;
+  padding-top: 6rem;
+}
+
+.landing img {
+  position: absolute;
+  right: 0;
 }
