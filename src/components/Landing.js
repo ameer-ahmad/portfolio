@@ -9,6 +9,7 @@ const Landing = () => {
                 <h2>{'<'} Software Developer /{'>'}</h2>
                 <p>I build .. Lorem ipsum dolor sit amet</p>
             </div>
+            <img src={backgroundLanding} />
         </div>
     )
 }
