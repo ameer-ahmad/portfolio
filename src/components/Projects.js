@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import backgroundProjects from '../img/background-projects.png';
+import Modal1 from './Modal1';
 
 const Projects = () => {
     return (
@@ -12,6 +13,7 @@ const Projects = () => {
                 <ProjectCard name="Capture" languages={['HTML5', 'CSS3', 'React']} />
             </div>
             <img className="backgroundProjects" src={backgroundProjects}/>
+            <Modal1/>
         </>
     )
 }
