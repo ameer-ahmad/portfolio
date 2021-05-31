@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import backgroundProjects from '../img/background-projects.png';
 import Modal1 from './Modal1';
+import Modal2 from './Modal2';
 import shoppies from '../img/shoppies.png';
 import rumble from '../img/rumble.png';
 import waves from '../img/waves.png';
@@ -9,27 +10,56 @@ import capture from '../img/capture.png';
 
 const Projects = () => {
 
+    const btnModal = React.createRef()
+
     const showModal1 = () => {
-        const modal = document.querySelector('.modal');
+        const modal = document.querySelector('.modal1');
         const workPage = document.querySelector('.work');
         const footer = document.querySelector('footer');
         const nav = document.querySelector('header');
-        modal.style.display = "block";
+        modal.classList.add('active');
         workPage.classList.add('blur');
         footer.classList.add('blur');
         nav.classList.add('blur');
+        btnModal.current.classList.add('active');
+    }
+
+    const showModal2 = () => {
+        const modal = document.querySelector('.modal2');
+        const workPage = document.querySelector('.work');
+        const footer = document.querySelector('footer');
+        const nav = document.querySelector('header');
+        modal.classList.add('active');
+        workPage.classList.add('blur');
+        footer.classList.add('blur');
+        nav.classList.add('blur');
+        btnModal.current.classList.add('active');
+    }
+
+    const closeModal = () => {
+        const modal = document.querySelector('.active');
+        const workPage = document.querySelector('.work');
+        const footer = document.querySelector('footer');
+        const nav = document.querySelector('header');
+        modal.classList.remove('active');
+        btnModal.current.classList.remove('active');
+        workPage.classList.remove('blur');
+        footer.classList.remove('blur');
+        nav.classList.remove('blur');
     }
 
     return (
         <>
             <div className="projects">
-                <ProjectCard showModal1={showModal1} name="Shoppies" languages={['HTML5', 'CSS3', 'React']} image={shoppies} />
-                <ProjectCard name="Rumble" languages={['HTML5', 'CSS3', 'React']} image={rumble}/>
+                <ProjectCard showModal={showModal1} name="Shoppies" languages={['HTML5', 'CSS3', 'React']} image={shoppies} />
+                <ProjectCard showModal={showModal2} name="Rumble" languages={['HTML5', 'CSS3', 'React']} image={rumble}/>
                 <ProjectCard name="Waves" languages={['HTML5', 'SCSS', 'React']} image={waves} />
                 <ProjectCard name="Capture" languages={['HTML5', 'CSS3', 'React']} image={capture} />
             </div>
             <img className="backgroundProjects" src={backgroundProjects}/>
             <Modal1/>
+            <Modal2/>
+            <button className="closeModal" onClick={closeModal} ref={btnModal}>close</button>
         </>
     )
 }
