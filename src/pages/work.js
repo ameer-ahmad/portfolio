@@ -4,10 +4,10 @@ import Projects from '../components/Projects';
 
 const Work = () => {
     return (
-        <>
+        <div className="work">
             <Landing/>
             <Projects/>
-        </>
+        </div>
     )
 }
 
