@@ -431,6 +431,25 @@ footer {
   height: 80rem;
 }
 
+/* Mobile Responsiveness */
+
+@media screen and (max-width: 600px) {
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li:first-of-type {
+    margin-left: 0;
+  }
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+}
+
 /* Fonts */
 
 @font-face {
